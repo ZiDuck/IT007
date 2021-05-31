@@ -36,6 +36,7 @@ void main()
         flag2[i] = 0;
         arr[i] = 0;
         wt[i] = 0;
+	tam[i] = 0;
     }
     i = 0;
 
@@ -43,6 +44,8 @@ void main()
     {
         if (bur_tam[i] <= qt && bur_tam[i] > 0) // Lần thực hiện cuối cùng
         {
+	    if(flag2[i] == 0)
+	    	star[i] = time;
             fprintf(fo, "%d %d ", pn[i], time);
             wt[i] += time - tam[i];
             time += bur_tam[i];
